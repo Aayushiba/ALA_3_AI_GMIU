@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Future of AI Chatbot</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
   <div class="container">
@@ -12,17 +12,39 @@
       <h1>🤖 AI in 10 Years</h1>
       <div id="chat-log"></div>
       <form onsubmit="sendMessage(event)">
-        <input type="text" id="question" placeholder="Ask a question..." required>
+        <input type="text" id="question" placeholder="Ask a question..." required autocomplete="off">
         <button type="submit">Send</button>
       </form>
     </div>
   </div>
 
   <script>
+    const placeholders = [
+      "What is the future of AI in healthcare?",
+      "Will AI take over jobs?",
+      "Can AI replace doctors?",
+      "What is AGI?",
+      "How will AI impact education?",
+      "What’s the risk of AI weaponization?",
+      "Will AI be regulated in the future?"
+    ];
+
+    let current = 0;
+    const input = document.getElementById("question");
+
+    function rotatePlaceholder() {
+      input.placeholder = placeholders[current];
+      current = (current + 1) % placeholders.length;
+    }
+
+    setInterval(rotatePlaceholder, 4000);
+
     async function sendMessage(e) {
       e.preventDefault();
-      const question = document.getElementById("question").value;
+      const question = input.value.trim();
       const chatLog = document.getElementById("chat-log");
+
+      if (!question) return;
 
       chatLog.innerHTML += `<div class="user-msg"><strong>You:</strong> ${question}</div>`;
 
@@ -34,7 +56,8 @@
 
       const data = await response.json();
       chatLog.innerHTML += `<div class="bot-msg"><strong>Bot:</strong> ${data.answer}</div>`;
-      document.getElementById("question").value = "";
+      input.value = "";
+      input.placeholder = placeholders[current];
       chatLog.scrollTop = chatLog.scrollHeight;
     }
   </script>
