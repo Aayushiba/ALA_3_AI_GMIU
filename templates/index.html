@@ -1,65 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Future of AI Chatbot</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💸 Financial Literacy Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #c3f3d7, #a0e6a7, #f7e8b5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .chat-container {
+      background: #fff;
+      width: 95%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1b5e20;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    #chatbox {
+      flex: 1;
+      overflow-y: auto;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #f9fff9;
+    }
+
+    .message {
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background: #81c784;
+      align-self: flex-end;
+      color: #fff;
+    }
+
+    .bot {
+      background: #e8f5e9;
+      border-left: 4px solid #66bb6a;
+      align-self: flex-start;
+      color: #333;
+    }
+
+    .input-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #81c784;
+      outline: none;
+      font-size: 15px;
+    }
+
+    button {
+      background: #66bb6a;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #388e3c;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      .chat-container { padding: 15px; }
+      button { padding: 8px 15px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="chat-window">
-      <h1>🤖 AI in 10 Years</h1>
-      <div id="chat-log"></div>
-      <form onsubmit="sendMessage(event)">
-        <input type="text" id="question" placeholder="Ask a question..." required autocomplete="off">
-        <button type="submit">Send</button>
-      </form>
+  <div class="chat-container">
+    <h1>💸 Financial Literacy Assistant</h1>
+    <div id="chatbox"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Ask me: What is compound interest?">
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
   <script>
-    const placeholders = [
-      "What is the future of AI in healthcare?",
-      "Will AI take over jobs?",
-      "Can AI replace doctors?",
-      "What is AGI?",
-      "How will AI impact education?",
-      "What’s the risk of AI weaponization?",
-      "Will AI be regulated in the future?"
+    const examples = [
+      "What is financial literacy?",
+      "How do I start saving money?",
+      "What is compound interest?",
+      "Explain SIP in mutual funds",
+      "How to improve my credit score?"
     ];
 
-    let current = 0;
-    const input = document.getElementById("question");
+    let exIndex = 0;
+    setInterval(() => {
+      document.getElementById("userInput").placeholder = "Ask me: " + examples[exIndex];
+      exIndex = (exIndex + 1) % examples.length;
+    }, 3000);
 
-    function rotatePlaceholder() {
-      input.placeholder = placeholders[current];
-      current = (current + 1) % placeholders.length;
-    }
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
 
-    setInterval(rotatePlaceholder, 4000);
+      if (!input.value.trim()) return;
 
-    async function sendMessage(e) {
-      e.preventDefault();
-      const question = input.value.trim();
-      const chatLog = document.getElementById("chat-log");
+      let userMsg = document.createElement("div");
+      userMsg.className = "message user";
+      userMsg.innerText = input.value;
+      chatbox.appendChild(userMsg);
 
-      if (!question) return;
-
-      chatLog.innerHTML += `<div class="user-msg"><strong>You:</strong> ${question}</div>`;
-
-      const response = await fetch("/ask", {
+      let response = await fetch("/ask", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "question=" + encodeURIComponent(question)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: input.value })
       });
 
-      const data = await response.json();
-      chatLog.innerHTML += `<div class="bot-msg"><strong>Bot:</strong> ${data.answer}</div>`;
+      let data = await response.json();
+      let botMsg = document.createElement("div");
+      botMsg.className = "message bot";
+      botMsg.innerText = data.answer;
+      chatbox.appendChild(botMsg);
+
+      chatbox.scrollTop = chatbox.scrollHeight;
       input.value = "";
-      input.placeholder = placeholders[current];
-      chatLog.scrollTop = chatLog.scrollHeight;
     }
+
+    window.onload = () => {
+      const chatbox = document.getElementById("chatbox");
+      let welcome = document.createElement("div");
+      welcome.className = "message bot";
+      welcome.innerText = "👋 Welcome! I’m your Financial Literacy Assistant. Ask me about budgeting, saving, investing, or taxes to get started!";
+      chatbox.appendChild(welcome);
+    };
   </script>
 </body>
 </html>
