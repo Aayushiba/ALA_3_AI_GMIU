@@ -1,0 +1,206 @@
+[
+  {
+    "question": "What is financial literacy?",
+    "answer": "Financial literacy is the ability to understand and effectively use financial skills such as budgeting, saving, investing, and debt management."
+  },
+  {
+    "question": "Why is financial literacy important?",
+    "answer": "It helps individuals make informed decisions about money, avoid debt traps, and achieve long-term financial stability."
+  },
+  {
+    "question": "What is a budget?",
+    "answer": "A budget is a plan that outlines expected income and expenses over a specific period to manage money efficiently."
+  },
+  {
+    "question": "How do I create a personal budget?",
+    "answer": "Track your income, list all expenses, categorize them into needs and wants, and allocate spending limits accordingly."
+  },
+  {
+    "question": "What is the 50/30/20 rule?",
+    "answer": "It suggests spending 50% of income on needs, 30% on wants, and saving or investing 20%."
+  },
+  {
+    "question": "What is an emergency fund?",
+    "answer": "An emergency fund is money set aside for unexpected expenses like medical bills or job loss—ideally 3-6 months of expenses."
+  },
+  {
+    "question": "What is the difference between saving and investing?",
+    "answer": "Saving is setting aside money for short-term needs with low risk, while investing involves using money to generate higher returns over time with some risk."
+  },
+  {
+    "question": "What is inflation?",
+    "answer": "Inflation is the rate at which the general level of prices for goods and services rises, reducing purchasing power."
+  },
+  {
+    "question": "How can inflation affect savings?",
+    "answer": "Inflation decreases the real value of savings over time, so it’s better to invest in assets that grow faster than inflation."
+  },
+  {
+    "question": "What is a credit score?",
+    "answer": "A credit score is a numerical rating that represents your creditworthiness, typically ranging from 300 to 900."
+  },
+  {
+    "question": "How can I improve my credit score?",
+    "answer": "Pay bills on time, reduce outstanding debt, avoid too many credit inquiries, and maintain old accounts."
+  },
+  {
+    "question": "What is compound interest?",
+    "answer": "Compound interest is the interest earned on both the initial principal and the accumulated interest from previous periods."
+  },
+  {
+    "question": "What is simple interest?",
+    "answer": "Simple interest is calculated only on the original amount of money invested or loaned."
+  },
+  {
+    "question": "What is diversification in investing?",
+    "answer": "Diversification means spreading investments across different asset types to reduce risk."
+  },
+  {
+    "question": "What is a mutual fund?",
+    "answer": "A mutual fund pools money from investors to buy stocks, bonds, or other assets managed by professionals."
+  },
+  {
+    "question": "What is SIP in mutual funds?",
+    "answer": "SIP (Systematic Investment Plan) allows you to invest a fixed amount regularly in a mutual fund, encouraging disciplined investing."
+  },
+  {
+    "question": "What are stocks?",
+    "answer": "Stocks represent ownership in a company, and shareholders can earn through dividends or stock price appreciation."
+  },
+  {
+    "question": "What are bonds?",
+    "answer": "Bonds are debt instruments where investors lend money to an entity for a fixed period at a set interest rate."
+  },
+  {
+    "question": "What is an ETF?",
+    "answer": "An ETF (Exchange-Traded Fund) is a basket of securities traded on a stock exchange, combining features of mutual funds and stocks."
+  },
+  {
+    "question": "What is a fixed deposit?",
+    "answer": "A fixed deposit (FD) is a savings instrument that offers a fixed interest rate for a set period, usually offered by banks."
+  },
+  {
+    "question": "What is a recurring deposit?",
+    "answer": "A recurring deposit (RD) allows you to deposit a fixed amount monthly and earn interest over time."
+  },
+  {
+    "question": "What is risk in investing?",
+    "answer": "Risk refers to the possibility of losing some or all of your investment due to market fluctuations or other factors."
+  },
+  {
+    "question": "What is return on investment (ROI)?",
+    "answer": "ROI measures how much profit or loss is made on an investment relative to its cost."
+  },
+  {
+    "question": "What is a debit card?",
+    "answer": "A debit card allows you to spend money directly from your bank account for purchases or ATM withdrawals."
+  },
+  {
+    "question": "What is a credit card?",
+    "answer": "A credit card allows you to borrow money from a bank to make purchases, which must be repaid later with interest if unpaid."
+  },
+  {
+    "question": "What is UPI?",
+    "answer": "UPI (Unified Payments Interface) is an instant real-time payment system developed by NPCI to transfer money between bank accounts via mobile."
+  },
+  {
+    "question": "What is a digital wallet?",
+    "answer": "A digital wallet is an app that securely stores payment information for easy online or offline transactions."
+  },
+  {
+    "question": "How can I avoid credit card debt?",
+    "answer": "Pay your bills in full each month, avoid impulse purchases, and keep utilization below 30% of your credit limit."
+  },
+  {
+    "question": "What is insurance?",
+    "answer": "Insurance is a financial product that provides protection against potential future losses or damages in exchange for regular premiums."
+  },
+  {
+    "question": "What is life insurance?",
+    "answer": "Life insurance provides a financial payout to your beneficiaries in case of your death."
+  },
+  {
+    "question": "What is health insurance?",
+    "answer": "Health insurance covers medical expenses incurred due to illness, hospitalization, or injury."
+  },
+  {
+    "question": "What is term insurance?",
+    "answer": "Term insurance provides coverage for a specific period and pays a benefit only if the policyholder dies during that term."
+  },
+  {
+    "question": "What is a pension plan?",
+    "answer": "A pension plan helps you save and invest for retirement, providing regular income after retirement."
+  },
+  {
+    "question": "What is tax planning?",
+    "answer": "Tax planning is the process of organizing finances to minimize tax liability using legal methods."
+  },
+  {
+    "question": "What are deductions under Section 80C?",
+    "answer": "Section 80C allows tax deductions up to ₹1.5 lakh for investments like PPF, ELSS, life insurance, and EPF."
+  },
+  {
+    "question": "What is GST?",
+    "answer": "GST (Goods and Services Tax) is a single indirect tax on the supply of goods and services in India."
+  },
+  {
+    "question": "What is income tax?",
+    "answer": "Income tax is a tax imposed by the government on the income earned by individuals or businesses."
+  },
+  {
+    "question": "What is net worth?",
+    "answer": "Net worth is the difference between your total assets and liabilities — it reflects your financial health."
+  },
+  {
+    "question": "What is asset allocation?",
+    "answer": "Asset allocation is the process of dividing your investments among asset categories like stocks, bonds, and cash."
+  },
+  {
+    "question": "What is financial planning?",
+    "answer": "Financial planning involves setting life goals, estimating future costs, and creating a plan to achieve them through proper financial management."
+  },
+  {
+    "question": "What is retirement planning?",
+    "answer": "Retirement planning involves setting aside funds during working years to ensure financial security after retirement."
+  },
+  {
+    "question": "What is a demat account?",
+    "answer": "A demat account holds your shares and securities in electronic form, making trading easier and safer."
+  },
+  {
+    "question": "What is an IPO?",
+    "answer": "IPO (Initial Public Offering) is when a private company offers its shares to the public for the first time."
+  },
+  {
+    "question": "What is diversification?",
+    "answer": "Diversification means investing across different asset types to reduce risk and stabilize returns."
+  },
+  {
+    "question": "What is cryptocurrency?",
+    "answer": "Cryptocurrency is a digital currency that uses cryptography for security, such as Bitcoin or Ethereum."
+  },
+  {
+    "question": "Is cryptocurrency legal in India?",
+    "answer": "Cryptocurrency trading is legal in India, but it is not recognized as legal tender and is subject to taxation."
+  },
+  {
+    "question": "What is financial fraud?",
+    "answer": "Financial fraud involves deceptive actions to gain money illegally, such as phishing or Ponzi schemes."
+  },
+  {
+    "question": "How can I protect myself from online fraud?",
+    "answer": "Use strong passwords, avoid sharing OTPs, verify sources before payments, and regularly monitor bank accounts."
+  },
+  {
+    "question": "What is passive income?",
+    "answer": "Passive income is money earned with minimal effort, such as rent, dividends, or royalties."
+  },
+  {
+    "question": "What is the importance of saving early?",
+    "answer": "Saving early allows your money to grow through compounding, leading to greater wealth over time."
+  },
+  {
+    "question": "What is financial independence?",
+    "answer": "Financial independence means having enough income to cover expenses without relying on employment or external support."
+  }
+]
